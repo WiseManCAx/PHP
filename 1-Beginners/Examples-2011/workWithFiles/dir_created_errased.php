@@ -1,14 +1,12 @@
 <?php
-if(is_dir('ubuntu'))
-{
-echo 'Dir exists.<br>';
-rmdir('ubuntu');
-echo 'Съдържанието може да се изтрие само, ако директорията е празна!<br>';
-echo '...wait ...Dir deleted';
-}
-else
-{
-echo 'Dir do not exists<br>';
-mkdir('ubuntu');
-echo '...wait ...Dir created!';
+
+if (is_dir('ubuntu')) {
+    echo 'Dir exists.<br>';
+    rmdir('ubuntu');
+    echo 'РЎСЉРґСЉСЂР¶Р°РЅРёРµС‚Рѕ РјРѕР¶Рµ РґР° СЃРµ РёР·С‚СЂРёРµ СЃР°РјРѕ, Р°РєРѕ РґРёСЂРµРєС‚РѕСЂРёСЏС‚Р° Рµ РїСЂР°Р·РЅР°!<br>';
+    echo '...wait ...Dir deleted';
+} else {
+    echo 'Dir do not exists<br>';
+    mkdir('ubuntu');
+    echo '...wait ...Dir created!';
 }

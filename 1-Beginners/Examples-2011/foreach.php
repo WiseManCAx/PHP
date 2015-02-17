@@ -1,24 +1,18 @@
-<?php
-$_kivi=' Ë‚Ë';
-$fruits_west=array(1=>'¡‡Ì‡Ì',2=>'ÀËÏÓÌ',3=>'Ã‡Ì‰‡ËÌ‡',4=>'œÓÚÓÍ‡Î',5=>$_kivi);
-$fruits_bg=array(1=>'ﬂ·˙ÎÍ‡',2=>' Û¯‡',3=>'—ÎË‚‡');
-$fruits[1]=$fruits_west;
-$fruits[2]=$fruits_bg;
+Ôªø<?php
+$_kivi = '–ö–∏–≤–∏';
+$fruits_west = array(1 => '–ë–∞–Ω–∞–Ω', 2 => '–õ–∏–º–æ–Ω', 3 => '–ú–∞–Ω–¥–∞—Ä–∏–Ω–∞', 4 => '–ü–æ—Ä—Ç–æ–∫–∞–ª', 5 => $_kivi);
+$fruits_bg = array(1 => '–Ø–±—ä–ª–∫–∞', 2 => '–ö—Ä—É—à–∞', 3 => '–°–ª–∏–≤–∞');
+$fruits[1] = $fruits_west;
+$fruits[2] = $fruits_bg;
 
-foreach ($fruits as $key => $value)
-    {
-    if (is_array($value))
-    {
-        foreach ($value as $k_key => $v_value)
-            {
-                echo $k_key.'==='.$v_value.'<br>';
-            }
-            echo '<hr><br>';
-    }
- else {
+foreach ($fruits as $key => $value) {
+    if (is_array($value)) {
+        foreach ($value as $k_key => $v_value) {
+            echo $k_key . '===' . $v_value . '<br>';
+        }
         echo '<hr><br>';
-        echo $key.'==='.$value.'<br>';
+    } else {
+        echo '<hr><br>';
+        echo $key . '===' . $value . '<br>';
     }
-    }
-
-?>
+}

@@ -1,12 +1,10 @@
-<?php
-
-echo '<pre>'.print_r($_POST,true).'</pre>';
-/* $_POST - Една от малкото наистина глобални променливи
- * Предава информацията през Header
-*/
-
-echo '<hr><br>';
-echo '<pre>'.print_r($_POST['UserName'],true).'</pre>';
+п»ї<?php
+echo '<pre>' . print_r($_POST, true) . '</pre>';
+/* $_POST - Р•РґРЅР° РѕС‚ РјР°Р»РєРѕС‚Рѕ РЅР°РёСЃС‚РёРЅР° РіР»РѕР±Р°Р»РЅРё РїСЂРѕРјРµРЅР»РёРІРё
+ * РџСЂРµРґР°РІР° РёРЅС„РѕСЂРјР°С†РёСЏС‚Р° РїСЂРµР· Header
+ */
 
 echo '<hr><br>';
-?>
+echo '<pre>' . print_r($_POST['UserName'], true) . '</pre>';
+
+echo '<hr><br>';

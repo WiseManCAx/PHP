@@ -6,11 +6,11 @@
     </head>
     <body>
         <?php
-echo "Hello Word<br>";
+        echo "Hello Word<br>";
         ?>
         <hr>
         <?php
-echo "Hello WiseMan CAx";
+        echo "Hello WiseMan CAx";
         ?>
     </body>
 </html>

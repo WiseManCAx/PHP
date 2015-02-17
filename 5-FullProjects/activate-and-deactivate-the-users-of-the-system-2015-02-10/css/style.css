@@ -1,0 +1,54 @@
+/* GALLERY -----------------------------------------------*/
+
+.gallery{
+	display: block;
+	overflow: hidden;
+
+}
+
+.gallery div{
+	display: block;
+	float: left;
+	overflow: hidden;
+	background: url(../img/plus-sign.png) center center no-repeat;
+	width: 204px;
+	height: 148px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.gallery.three-cols div{
+	width: 282px;
+	height: 267px;
+}
+
+ .gallery.two-cols div{
+	width: 438px;
+	height: 267px;
+}
+
+.gallery div a{
+	display: block;
+}
+#image {
+	height: 280px;
+	width: 260px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: lightgrey;
+	padding: 10px;
+}
+#title {
+	background: white;
+}
+
+.top-buttons {
+	background: grey;
+	padding: 10px;
+	width: 800px;
+	margin: 0px auto;
+}

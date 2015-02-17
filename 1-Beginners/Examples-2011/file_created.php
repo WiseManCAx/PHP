@@ -1,18 +1,14 @@
-<?php
-$_UbuntuMan='Hello, Ubumtu Man!';
-if(file_exists('C:\Documents and Settings\user\Desktop\wisemancax.txt'))
-{
+ï»¿<?php
+$_UbuntuMan = 'Hello, Ubumtu Man!';
+if (file_exists('C:\Documents and Settings\user\Desktop\wisemancax.txt')) {
     echo 'File exist';
-    
+
     echo '<br><br><hr><br>';
-    $_wisemancax=file_get_contents('C:\Documents and Settings\user\Desktop\wisemancax.txt');
+    $_wisemancax = file_get_contents('C:\Documents and Settings\user\Desktop\wisemancax.txt');
     echo $_wisemancax;
     echo '<br><br><hr><br>';
-    var_dump($_wisemancax); //Íå ïîêàçâàé òîçè ïðîìåíëèâà â îðèãèíàëåí êîä - èçòðèé ÿ.
-}
-else
-{
+    var_dump($_wisemancax); //ÐÐµ Ð¿Ð¾ÐºÐ°Ð·Ð²Ð°Ð¹ Ñ‚Ð¾Ð·Ð¸ Ð¿Ñ€Ð¾Ð¼ÐµÐ½Ð»Ð¸Ð²Ð° Ð² Ð¾Ñ€Ð¸Ð³Ð¸Ð½Ð°Ð»ÐµÐ½ ÐºÐ¾Ð´ - Ð¸Ð·Ñ‚Ñ€Ð¸Ð¹ Ñ.
+} else {
     echo 'File do not Exist';
     file_put_contents('C:\Documents and Settings\user\Desktop\wisemancax.txt', $_UbuntuMan);
 }
-?>

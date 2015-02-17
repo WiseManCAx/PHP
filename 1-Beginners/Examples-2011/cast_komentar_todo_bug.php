@@ -1,11 +1,9 @@
-<?php
-$PI=3.1415826;
+п»ї<?php
+$PI = 3.1415826;
 echo $PI;
 
 // TODO - komentar kakvo o6te ne e dovyr6eno;
 // BUG - zapazena duma za otkriti gre6ki;
 
-$A="ABCDF";
-$B=(int)$A; //CAST - Кастване, т.е. накарахме PHP да преобразува текст в число;
-
-?>
+$A = "ABCDF";
+$B = (int) $A; //CAST - РљР°СЃС‚РІР°РЅРµ, С‚.Рµ. РЅР°РєР°СЂР°С…РјРµ PHP РґР° РїСЂРµРѕР±СЂР°Р·СѓРІР° С‚РµРєСЃС‚ РІ С‡РёСЃР»Рѕ;

@@ -1,19 +1,19 @@
-<?php
-$_proba_strings='  qwertyuiop  ';
+ï»¿<?php
+$_proba_strings = '  qwertyuiop  ';
 echo strlen($_proba_strings);
 
 echo '<br><br><hr><br>';
 
-$_trim_string=trim($_proba_strings);
-// ltrim($_proba_strings) - Ïðåìàõâà ñàìî íà÷àëíèòå ïðàçíè ñèìâîëè;
-// rtrim($_proba_strings) - Ïðåìàõâà ñàìî êðàéíèòå ïðàçíè ñèìâîëè;
+$_trim_string = trim($_proba_strings);
+// ltrim($_proba_strings) - ÐŸÑ€ÐµÐ¼Ð°Ñ…Ð²Ð° ÑÐ°Ð¼Ð¾ Ð½Ð°Ñ‡Ð°Ð»Ð½Ð¸Ñ‚Ðµ Ð¿Ñ€Ð°Ð·Ð½Ð¸ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¸;
+// rtrim($_proba_strings) - ÐŸÑ€ÐµÐ¼Ð°Ñ…Ð²Ð° ÑÐ°Ð¼Ð¾ ÐºÑ€Ð°Ð¹Ð½Ð¸Ñ‚Ðµ Ð¿Ñ€Ð°Ð·Ð½Ð¸ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¸;
 echo strlen($_trim_string);
-// echo strlen(trim($_proba_strings)); Òîâà å ñúêðàòåíèÿ âàðèíàò - ïåñòè ïðîìåíëèâè!!!;
+// echo strlen(trim($_proba_strings)); Ð¢Ð¾Ð²Ð° Ðµ ÑÑŠÐºÑ€Ð°Ñ‚ÐµÐ½Ð¸Ñ Ð²Ð°Ñ€Ð¸Ð½Ð°Ñ‚ - Ð¿ÐµÑÑ‚Ð¸ Ð¿Ñ€Ð¾Ð¼ÐµÐ½Ð»Ð¸Ð²Ð¸!!!;
 
 
 //str_replace($search, $replace, $subject);
 /*
- if(strpos($_proverqvanata_promenliva, 'Æåëàíèÿ íèç')!==false)
+ if(strpos($_proverqvanata_promenliva, 'Ð–ÐµÐ»Ð°Ð½Ð¸Ñ Ð½Ð¸Ð·')!==false)
  {
   echo 'Found!';
  }
@@ -27,5 +27,4 @@ echo strlen($_trim_string);
 // echo strtolower($_vsi4ko_s_malki_bukvi);
 // echo ucfirst($_pyrvata_e_golqma_drugite_bukvi_ne_promenqt);
 
-// Ðàçãëåäàé emplode è explode ;
-?>
+// Ð Ð°Ð·Ð³Ð»ÐµÐ´Ð°Ð¹ emplode Ð¸ explode ;

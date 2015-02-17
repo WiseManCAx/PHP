@@ -1,14 +1,10 @@
-<?php
-$_UbuntuMan='Hello!';
-if(file_exists('C:\Documents and Settings\user\Desktop\wisemancax.txt'))
-{
+ï»¿<?php
+$_UbuntuMan = 'Hello!';
+if (file_exists('C:\Documents and Settings\user\Desktop\wisemancax.txt')) {
     unlink('C:\Documents and Settings\user\Desktop\wisemancax.txt');
     echo 'File deleted...';
-    // Ñ òàçè êîìàíäà èçòðèâàìå (íå ãî ïðåìåñòâàìå â êîø÷åòî) ôàéëà;
-}
-else
-{
+    // Ð¡ Ñ‚Ð°Ð·Ð¸ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð° Ð¸Ð·Ñ‚Ñ€Ð¸Ð²Ð°Ð¼Ðµ (Ð½Ðµ Ð³Ð¾ Ð¿Ñ€ÐµÐ¼ÐµÑÑ‚Ð²Ð°Ð¼Ðµ Ð² ÐºÐ¾ÑˆÑ‡ÐµÑ‚Ð¾) Ñ„Ð°Ð¹Ð»Ð°;
+} else {
     echo 'File do not Exist';
     file_put_contents('C:\Documents and Settings\user\Desktop\wisemancax.txt', $_UbuntuMan);
 }
-?>

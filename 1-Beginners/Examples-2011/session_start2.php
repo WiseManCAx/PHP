@@ -1,15 +1,12 @@
-<?php
+ï»¿<?php
 session_start();
 
-if($_SESSION['$a']>12)
-{
-?>
-<a href="session_start1.php">session end</a>;
-<?php
-}
-else
-{
-$_SESSION['$a']+=1;
-echo $_SESSION['$a'];
-// Èíêðåìåíòèðàíåòî ðàáîòè;
+if ($_SESSION['$a'] > 12) {
+    ?>
+    <a href="session_start1.php">session end</a>;
+    <?php
+} else {
+    $_SESSION['$a']+=1;
+    echo $_SESSION['$a'];
+// Ð˜Ð½ÐºÑ€ÐµÐ¼ÐµÐ½Ñ‚Ð¸Ñ€Ð°Ð½ÐµÑ‚Ð¾ Ñ€Ð°Ð±Ð¾Ñ‚Ð¸;
 }

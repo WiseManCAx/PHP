@@ -1,63 +1,42 @@
-<?php
+ï»¿<?php
+$A = "ABCDF";
+$B = (int) $A; //CAST - ÐšÐ°ÑÑ‚Ð²Ð°Ð½Ðµ, Ñ‚.Ðµ. Ð½Ð°ÐºÐ°Ñ€Ð°Ñ…Ð¼Ðµ PHP Ð´Ð° Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÐ²Ð° Ñ‚ÐµÐºÑÑ‚ Ð² Ñ‡Ð¸ÑÐ»Ð¾;
 
-$A="ABCDF";
-$B=(int)$A; //CAST - Êàñòâàíå, ò.å. íàêàðàõìå PHP äà ïðåîáðàçóâà òåêñò â ÷èñëî;
-
-function CAST_TO_INT($var, $min = FALSE, $max = FALSE)
-{
-    $var = is_int($var) ? $var : (int)(is_scalar($var) ? $var : 0);
+function CAST_TO_INT($var, $min = FALSE, $max = FALSE) {
+    $var = is_int($var) ? $var : (int) (is_scalar($var) ? $var : 0);
     if ($min !== FALSE && $var < $min)
         return $min;
-    elseif($max !== FALSE && $var > $max)
-        return $max;
-    return $var;
-
-}
-
-function CAST_TO_FLOAT($var, $min = FALSE, $max = FALSE)
-{
-    $var = is_float($var) ? $var : (float)(is_scalar($var) ? $var : 0);
-    if ($min !== FALSE && $var < $min)
-        return $min;
-    elseif($max !== FALSE && $var > $max)
+    elseif ($max !== FALSE && $var > $max)
         return $max;
     return $var;
 }
 
-function CAST_TO_BOOL($var)
-{
-    return (bool)(is_bool($var) ? $var : is_scalar($var) ? $var : FALSE);
+function CAST_TO_FLOAT($var, $min = FALSE, $max = FALSE) {
+    $var = is_float($var) ? $var : (float) (is_scalar($var) ? $var : 0);
+    if ($min !== FALSE && $var < $min)
+        return $min;
+    elseif ($max !== FALSE && $var > $max)
+        return $max;
+    return $var;
 }
 
-function CAST_TO_STRING($var, $length = FALSE)
-{
+function CAST_TO_BOOL($var) {
+    return (bool) (is_bool($var) ? $var : is_scalar($var) ? $var : FALSE);
+}
+
+function CAST_TO_STRING($var, $length = FALSE) {
     if ($length !== FALSE && is_int($length) && $length > 0)
-        return substr(trim(is_string($var)
-                    ? $var
-                    : (is_scalar($var) ? $var : '')), 0, $length);
+        return substr(trim(is_string($var) ? $var : (is_scalar($var) ? $var : '')), 0, $length);
 
     return trim(
-                is_string($var)
-                ? $var
-                : (is_scalar($var) ? $var : ''));
+            is_string($var) ? $var : (is_scalar($var) ? $var : ''));
 }
 
-function CAST_TO_ARRAY($var)
-{
-    return is_array($var)
-            ? $var
-            : is_scalar($var) && $var
-                ? array($var)
-                : is_object($var) ? (array)$var : array();
+function CAST_TO_ARRAY($var) {
+    return is_array($var) ? $var : is_scalar($var) && $var ? array($var) : is_object($var) ? (array) $var : array();
 }
 
-function CAST_TO_OBJECT($var)
-{
-    return is_object($var)
-            ? $var
-            : is_scalar($var) && $var
-                ? (object)$var
-                : is_array($var) ? (object)$var : (object)NULL;
+function CAST_TO_OBJECT($var) {
+    return is_object($var) ? $var : is_scalar($var) && $var ? (object) $var : is_array($var) ? (object) $var : (object) NULL;
 }
-
 ?>
