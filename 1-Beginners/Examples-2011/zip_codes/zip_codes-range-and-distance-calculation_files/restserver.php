@@ -1,0 +1,1 @@
+fb_sharepro_render([{"url":"http:\/\/www.micahcarrick.com\/php-zip-code-range-and-distance-calculation.html","normalized_url":"http:\/\/www.micahcarrick.com\/php-zip-code-range-and-distance-calculation.html","share_count":1,"like_count":0,"comment_count":0,"total_count":1,"click_count":0,"comments_fbid":null,"commentsbox_count":0}]);

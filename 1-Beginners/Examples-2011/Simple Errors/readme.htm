@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>
+      Simple Errors ReadMe
+    </title>
+  </head>
+  <body bgcolor="white" text="black">
+    <h1>Simple Errors v. 0.1</h1>
+    <p>Quick jump:<br>
+    </p>
+    <ul>
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#includ">Included Files</a></li>
+      <li><a href="#instal">Installation</a></li>
+      <li><a href="#optim">Optimize Simple Errors</a></li>
+      <li><a href="#more">Upload Hierarchy</a></li>
+      <li><a href="#contact">Contact kneuf!</a></li>
+      <li><a href="#theend">The End!</a></li>
+    </ul>
+    <h3><a name="welcome">Welcome!</a></h3>
+    <p>This guide will help you install, configure, and optimize Simple Errors.</p>
+    <p>Thank-you for downloading Simple Errors. Simple Errors simple overrides the default Apache Error pages with your own, customized version.</p>
+    <p>Please note: this script is under the GNU GPL license. So, while it is free, the "<b>powered by Simple Errors v. x.xx by kneuf!</b>" must remain at the bottom of every page.</p>
+    <h3>Requirements</h3>
+    <p>The exact requirements are unknown, as this <i>is</i> a beta.</p>
+      But the basics include: 
+      <ul>
+        <li>Apache Server</li>
+        <li>PHP (tested with 4.2.x)</li>
+        <li>Ability to edit and write files</li>
+        <li>Access to .htacces file</li>
+        <li>Ability to upload and store these files somewhere</li>
+      </ul>
+      <h3><a name="includ">Included Files</a></h3>
+      <p>Make sure that when you got this, that these files are all present:<br>
+      </p>
+      <ul>
+        <li><b>config.inc.php</b>, the configuration file</li>
+        <li><b>errors.php</b>, the error parser file</li>
+        <li><b>error_type.log</b>, the file with the error codes and description and such</li>
+        <li><b>.htaccess</b>, the file that restricts URL access (the scripts can still access them) to the <b>.txt</b> and <b>.log</b> files.</li>
+        <li><b>error_log.log</b>, the file that logs all the errors</li>
+        <li><b>footer.txt</b>, the footer file.</li>
+        <li><b>header.txt</b>, the header file.</li>
+        <li><b>gpl.txt</b>, the GNU license file.</li>
+        <li><b>readme.htm</b>, this file.</li>
+      </ul>
+      <h3><a name="instal">Installation</a></h3>
+      <ol>
+        <li>If you don't already have it, download it! Go to <a href="http://www.kneuf.com">kneuf.com</a> to do so.</li>
+        <li>
+          Open <b>config.inc.php</b> and edit the following: 
+          <ul>
+            <li><b>$log_on_error = 1;</b> Set to 1 if you want to save the errors to a file, 0 if not. Note: you must fill out the $error_file variable. Default is <b>1</b>.</li>
+            <li><b>$email_on_error = 0;</b> Set to 1 if you want the script to email a report when an error occurs, 0 if not. Note: you must be able to send out mail from your server and fill in the
+            following variables. Default is <b>1</b>.</li>
+            <li><b>$show_errors = 0;</b> 1 = show debugging info, 0 = don't show debug info. Default is <b>0</b></li>
+            <li><b>$show_header = 0;</b> 1 = show header (specify file above, 0 = don't display header. Default is <b>0</b></li>
+            <li><b>$show_footer = 0;</b> 1 = show footer (specify file above, 0 = don't display footer. Default is <b>0</b></li>
+            <li><b>$main_site = "http://www.kneuf.com";</b> Your home page URL.</li>
+            <li><b>$log_file = "/full/system/path/to/error_type.log";</b> The absolute server path to the errors file (that contains the error codes and text, etc).</li>
+            <li><b>$error_file = "/full/system/path/to/error_log.log";</b> The absolute server path to the errors log file (that contains the log and when each error occurred).</li>
+            <li><b>$header = "/full/system/path/to/header.txt";</b> If $show_header is set to 1, specify the absolute server path to the header file location here.</li>
+            <li><b>$footer = "/full/system/path/to/footer.txt";</b> If $show_footer is set to 1, specify the absolute server path to the footer file location here.</li>
+            <li><b>$to = "";</b> Fill in the email address you want the report sent to.</li>
+          </ul>
+        </li>
+        <li>Open <b>errors.php</b> and edit the first line that says<br>
+         <b>include("/full/system/path/to/config.inc.php");</b> and fill in the full system path to the <b>config.inc.php</b> file.</li>
+        <li>Open the(or create, remember that the file name <b><i><u>is</u></i></b> .htaccess!) <b>.htaccess</b> file in the directory that you want to have Simple Errors monitor (<b><u>NOT</u></b>
+        the one that came with Simple Errors!). Note: Any directory that above this will also be monitored. E.x., say you put it in your root directory, say, <b>/</b>, and there is another directory
+        above that, <b>/test/</b>, then that directory will also be monitored.</li>
+        <li>
+          <ol>
+            <li>Remember to back-up the .htaccess file <i><u>before</u></i> making any changes to it!</li>
+            <li>Add the following lines:<br>
+             <textarea rows="10" cols="60" style="background-color:silver">
+                            ErrorDocument 400 /errors/errors.php?400
+                            ErrorDocument 401 /errors/errors.php?401
+                            ErrorDocument 402 /errors/errors.php?402
+                            ErrorDocument 403 /errors/errors.php?403
+                            ErrorDocument 404 /errors/errors.php?404
+                            ErrorDocument 500 /errors/errors.php?500
+            </textarea><br>
+             Note: If you install this script in a directory other than <b>/errors/</b>, then change <b>/errors/</b> to the directory you are going to be installing this script in.</li>
+            <li>Save all files, and upload <u>only</u> the <b>.htaccess</b> file we just modified.</li>
+          </ol>
+        </li>
+        <li>Edit <b>header.txt</b>, or <b>footer.txt</b> if you want.</li>
+        <li>Edit the HTML in the <b>errors.php</b> file if you wish, and upload all files. Recommended install directory is <b>/errors/</b>.</li>
+        <li><b>CHMOD</b> error_log.log to <b>755</b>, so it can be written to.</li>
+      </ol>
+      <h3><a name="optim">Optimize Simple Errors</a></h3>
+      <p>You can optimize Simple Errors in a variety of ways. Perhaps the most important one is the <b>error_type.log</b> file. You can add news error codes and information to it easily. But make
+      sure you add a new line to the <b>.htaccess</b> file that has all the <b>ErrorDocument</b> stuff in it.</p>
+            Example, add a new error code: 999, "Just Made This Up" 
+        <ol>
+          <li>
+            Open up <b>error_type.log</b> and have a look at it. Its format is:<br>
+<pre>
+ErrorCode|Title|SubTitle|ErrorText
+</pre>
+            <ul>
+              <li><b>ErrorCode</b> is the code of the error. So, in our example, it would be <b>999</b>.</li>
+              <li><b>Title</b> is the title for the document. So, in our example, it would be <b>999 - Just Made This Up</b>.</li>
+              <li><b>SubTitle</b> is the sub-heading for the document. So, in our example, it would be <b>Just Made This Up</b>.</li>
+              <li><b>ErrorText</b> is the text for the document, to better explain the error. So, in our example, it would be <b>This error means that I was lazy and couldn't figure out a better
+              example.</b>.</li>
+            </ul>
+          </li>
+          <li>
+            So, the new line that we will be adding is:<br>
+<pre>
+999|999 - Just Made This Up|Just Made This Up|This error means that I was lazy and couldn't figure out a better example.
+</pre>
+          </li>
+          <li>
+            Don't forget to add this line to the <b>.htaccess</b> file with all the ErrorDocument stuff in it:<br>
+<pre>
+ErrorDocument 999 /errors/errors.php?999
+</pre>
+          </li>
+          <li>Re-upload and presto! You should now have a new error for the script to handle.</li>
+          </ol>
+            <h3><a name="more">Upload Hierarchy</a></h3>
+            <p>When you upload the files, and put them in a directory called <b>/error/</b> (recommended), here is what is should look like:</p>
+            <ul>
+              <li>Document Root (e.x., URL is http://www.site.com)</li>
+              <li>
+                <ul>
+                  <li>.htaccess <b>(file)</b></li>
+                  <li>error <b>(directory)</b>
+                    <ul>
+                      <li>.htaccess <b>(file)</b></li>
+                      <li>errors.php <b>(file)</b></li>
+                      <li>config.inc.php <b>(file)</b></li>
+                      <li>error_type.log <b>(file)</b></li>
+                      <li>error_log.log <b>(file)</b></li>
+                      <li>footer.txt <b>(file)</b></li>
+                      <li>header.txt <b>(file)</b></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h3><a name="contact">Contact</a></h3>
+            <p>To contact kneuf!, visit <a href="http://www.kneuf.com">www.kneuf.com</a>.
+			<p>To visit the GNU website, <a href="http://www.gnu.org">www.gnu.org</a>.
+			<p>To visit the GNU GPL license website, <a href="http://www.gnu.org/licenses/licenses.html#GPL">www.gnu.org/licenses/licenses.html#GPL</a>.
+			<p>View the GPL license (local), <a href="gpl.txt">gpl.txt</a>.
+            <h3><a name="theend">The End!</a></h3>
+            <p>Hope this help file helps in a way. A remember: <b>Simple Errors is under the GNU GPL license</b>!
+            <p>That is all to this help file.
+			<P>PS: If .htaccess file doesn't work for you, make sure that you have it enabled (ask your system operator) or if it is used with a different filename, use that instead. 
+            <center>
+              <a href="http://www.kneuf.com" title="Powered by Simple Errors by kneuf!">Powered by Simple Errors by kneuf!</a>
+            </center>
+          </li>
+        </ul>
+      </blockquote>
+    </blockquote>
+  </body>
+</html>
+

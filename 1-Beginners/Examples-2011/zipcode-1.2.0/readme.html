@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+
+  
+  <title>PHP Zip Code Range and Distance</title>
+
+</head>
+
+<body>
+<h2>Setting up the Database</h2>
+<p>There are 6 files in the <span style="font-family: monospace;">/sql</span>
+directory which contain SQL statements intended for a MySQL database
+(though they should work just fine for any SQL database). The zip code
+database consists of over 40,000 records which would be too large a
+file for many configurations of phpMyAdmin. Therefore, I have broken
+the data into records of 10,000 resulting in 5 files. In phpMyAdmin,
+you can import these 6 files 1 at a time using the 'Import' tab. You
+MUST import the 'create_table.sql' file first, then each of the data
+files.</p>
+<p><span style="font-family: monospace;">create_table.sql</span><br style="font-family: monospace;" />
+<span style="font-family: monospace;">data_1.sql</span><br style="font-family: monospace;" />
+<span style="font-family: monospace;">data_2.sql</span><br style="font-family: monospace;" />
+<span style="font-family: monospace;">data_3.sql</span><br style="font-family: monospace;" />
+<span style="font-family: monospace;">data_4.sql</span><br style="font-family: monospace;" />
+<span style="font-family: monospace;">data_5.sql</span></p>
+<p>The database has changed since the last version. The data itself is
+comprised of data from multiple sources starting with the 2000 and 2004
+US Census data. Unlike version 1.x of this class, the database is no
+longer comprised of a state AND zip_code table, but a single zip_code
+table. Additionally, the table is created with an index on the zip_code
+column.</p>
+<h2>The Class: zipcode.class.php<br />
+</h2>
+<h3>Constants</h3>
+<pre>// constants for setting the $units data member<br />define('_UNIT_MILES', 'm');<br />define('_UNIT_KILOMETERS', 'k');<br /><br />// constants for passing $sort to get_zips_in_range()<br />define('_ZIPS_SORT_BY_DISTANCE_ASC', 1);<br />define('_ZIPS_SORT_BY_DISTANCE_DESC', 2);<br />define('_ZIPS_SORT_BY_ZIP_ASC', 3);<br />define('_ZIPS_SORT_BY_ZIP_DESC', 4);<br /><br />// constant for miles to kilometers conversion<br />define('_M2KM_FACTOR', 1.609344);</pre>
+<h3>Data Members</h3>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="font-family: monospace;">decimals</td>
+      <td>Read/Write. When returning distance values, this variable determines how many decimal places the result should be rounded to.</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">last_error</td>
+      <td>Read-only. Holds a string value of the last error that
+occured. This can be used should a method return an error value to get
+a human readable version of the error.&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">last_time</td>
+      <td>Read-only. Holds the last method execution time used to debug the efficiency of the get_zips_in_range() method.</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">units</td>
+      <td>Read/Write. Holds the type of units to show results in. Must be either _UNITS_MILES or _UNITS_KILOMETERS</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Methods</h3>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="font-family: monospace;">calculate_mileage($lat1, $lat2, $lon1, $lon2)</td>
+      <td>Calculates the mileage between the two lattitude/longitude points: $lat1/$lon1 and $lat2/$lon2.</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">chronometer()</td>
+      <td>Chronometer function from PHP manual used to time execution of get_distance() and get_zips_in_range() methods.</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">get_distance($zip1, $zip2)</td>
+      <td>Returns the distance between the two zip codes: $zip1 and
+$zip2. If there is an error, false is returned. Since the function can
+return 0 when 2 zips are the same, you must evaluate for an error
+condition using:<br />
+if (get_distance($zip1, $zip2) === false) // error condition</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">get_zip_details($zip)</td>
+      <td>Returns the details about the zip code: $zip. Details are in the form of a keyed array. The keys are: <span style="font-family: monospace;">latitude, longitude, city, county, state_prefix, state_name, area_code, </span>and<span style="font-family: monospace;"> time_zone</span>. All are pretty self-explanitory. Returns false on error.</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">get_zip_point($zip)</td>
+      <td>Gets the lattitude and longitude coordinates of the given zip code as a keyed array. The keys are: <span style="font-family: monospace;">lat</span> and <span style="font-family: monospace;">lon</span>. Returns false on error.</td>
+    </tr>
+    <tr>
+      <td style="font-family: monospace;">get_zips_in_range($zip, $range, $sort,$include_base)</td>
+      <td>Finds all zip codes within $range from $zip as a keyed array
+sorted by $sort. If $include_base is set to true or not specified, then
+$zip is included in the results. If it is set to false, then $zip is
+excluded from results. Possible values for $sort are: <span style="font-family: monospace;">_ZIPS_SORT_BY_DISTANCE_ASC</span> (default)<span style="font-family: monospace;">, _ZIPS_SORT_BY_DISTANCE_DESC, _ZIPS_SORT_BY_ZIP_ASC, _ZIPS_SORT_BY_ZIP_DESC</span>.
+The return value is a keyed array where the key is the zip code and the
+value is the distance from the base zip $zip. Returns false on error.</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+</body>
+
+</html>

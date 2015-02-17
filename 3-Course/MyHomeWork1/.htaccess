@@ -1,0 +1,46 @@
+AddDefaultCharset utf8
+
+# BEGIN ---WiseMan CAx---
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/index.php [L]
+</IfModule>
+
+###### Title: 200 - which indicates the server has found the page (url) you requested, and here it is;
+ErrorDocument 200 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/200.php
+###### Title: 301 - the page you requested has permanently moved to a new URL - so I'll give you the new URL content;
+ErrorDocument 301 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/301.php
+###### Title: 302 - the page you requested has temporarily moved to a new URL - so I'll give you the new URL content;
+ErrorDocument 302 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/302.php
+ErrorDocument 400 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/400.php
+ErrorDocument 401 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/401.php
+ErrorDocument 402 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/402.php
+ErrorDocument 403 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/403.php
+###### Title: 404 - The page you requested can't be found, I haven't got a clue where it could be, no one told me about that page, so sod off and guess again.
+ErrorDocument 404 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/404.php
+###### Title: 500 Internal Server Error
+ErrorDocument 500 http://localhost/PHP-Kurs-Gatakka-Address-Book-2013-09-18/0-Re6enie16-MyHomeWork-withLogin-2-RedaktiranaVersiq/Errors/500.php
+
+############################################
+## enable rewrites
+
+DirectoryIndex index.htm index.html index.shtml index.cgi index.php index.pl mypage.pl index.wml 
+RewriteEngine on
+
+############################################
+## redirect
+
+############################################
+## By default allow all access
+
+    Order allow,deny
+    Allow from all
+
+###########################################
+
+# END ---WiseMan CAx---

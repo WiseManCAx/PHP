@@ -1,0 +1,21 @@
+.slider
+{
+   position:absolute;
+   width:9px;
+   height:20px;
+   padding:0px 0px 0px 0px;
+   background-image:url(slider.gif);
+   cursor: pointer;
+}
+
+.colorField
+{
+   font-size: 12px;
+   font-family: Arial, Helvetica, Sans-Serif;
+   color: #000000;
+   background-color: #CCCCCC;
+   text-align:center;
+   padding:0px 0px 0px 0px;
+   position:absolute;
+   overflow:hidden;
+}

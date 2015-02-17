@@ -1,0 +1,6 @@
+000|000 - UnKnown Error|UnKnown Error|An unknown error has occurred. You may have put in a custom error code when calling the function, or some other has occurred. You should look over your servers error log for more information.
+400|400 - Bad Request|Bad Request|Bad Request
+401|401 - Authorization Required|Authorization Required|Either you supplied the wrong credential (e.g., password) or you are not authorized to view the file.
+403|403 - Forbidden|Forbidden|You are not allowed here.
+404|404 - File Not Found|File Not Found|The file you requested <b>{page}</b> was not found.
+500|500 - Internal Server Error|Internal Server Error|This script has performed an Internal Server Error.

@@ -1,0 +1,270 @@
+﻿/* Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz */
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; /*  */
+    font-size: 12px;
+    background-color: #FDEEF4; /* Pearl ::: #E5E4E2 -> Platinum */
+}
+
+.button 
+{
+    font: bold 14px Arial;
+    text-decoration: none;
+    background-color: #eee;
+    color: #333;
+    margin: 5px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #ccc;
+}
+
+.buttonSmall
+{
+    font: bold 12px Arial;
+    text-decoration: none;
+    background-color: #23cc23;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #ccc;
+}
+
+.center
+{
+    text-align: center;
+}
+
+.clear
+{
+    clear:both;
+    height:0px;
+    font-size:0px;
+    line-height:0px;
+}
+
+.icon
+{
+    width: 10px;
+    height: 10px;
+    padding: 0 auto;
+    margin: 0 auto;
+    border: none;
+}
+
+.form
+{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+
+#body
+{
+    width: 960px;
+    height: 100%;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+#footer
+{
+    margin: 10px;
+    padding-top: 15px;
+}
+
+a
+{color: black; text-decoration: underline;}
+a:link
+{text-decoration: none; color: black; }
+a:visited
+{text-decoration: none; color: #1569C7;} /* Blue Eyes */
+a:hover
+{text-decoration: underline; color: red;}
+a:active
+{text-decoration: underline; color: blueviolet;}
+
+body
+{
+    text-align: center;
+    cursor: default;
+}
+
+div
+{
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 5px;
+    border: 0;
+    margin: 0;
+}
+
+div.center
+{ 
+    float: center;
+    margin-top: 15px;
+}
+
+div.floatCenter
+{ 
+    float: center; 
+    margin: 15px; 
+}
+
+div.img
+{
+    margin: 2px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+hr
+{
+    margin: 10px;
+}
+
+p 
+{
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+img
+{
+    border: none;
+}
+
+img.floatCenter
+{ 
+    float: center; 
+    margin: 7px; 
+}
+
+table
+{
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 3px;
+}
+
+table.pretty
+{
+    border: 6px solid #9966FF;
+    text-align: center;
+    font-size: 1em;
+    text-indent: 4px;
+    line-height: 1.33em;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 3px;
+}
+
+textarea
+{
+    overflow: auto;
+}
+
+td
+{
+    font-size: 12pt;
+}
+
+td.left
+{
+    float: right; 
+    font-size: 12pt;
+}
+
+td.right
+{
+    float: left; 
+    font-size: 12pt;
+}
+
+tr.height40
+{
+    height: 40px;
+}
+
+th
+{
+    font-weight: bold;
+}
+
+thead th
+{
+    background: #c3d9ff;
+}
+
+tfoot
+{
+    font-style: italic;
+}
+
+ul
+{
+    list-style: none;
+}
+
+ul
+{
+    float: inherit;
+    padding: 15px 4px 15px 4px;
+}
+
+ul li
+{
+    display: inline;
+    line-height: 1.5em;
+}
+
+ul li a
+{
+    text-decoration: none;
+    display: block;
+    font-size: 1.3em;
+    float: left;
+}
+
+ul li a:link
+{
+    padding: 4px;
+    margin: 4px;
+    background: #fff;
+    color: red;
+}
+
+ul li a:visited
+{
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px;
+    color: green;
+    background-color: #fff;
+}
+
+ul li a:hover
+{
+    background: #fa0;
+    color: #000;
+}
+
+ul li a:active
+{
+    text-decoration: underline;
+    color: red;
+}

@@ -1,0 +1,40 @@
+500 || Wed, 24 Dec 2003 11:28:08 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+500 || Wed, 24 Dec 2003 11:28:10 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+500 || Wed, 24 Dec 2003 11:28:11 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 11:28:34 -0500 || /errors/errorss.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+500 || Wed, 24 Dec 2003 11:29:06 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+500 || Wed, 24 Dec 2003 11:29:35 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+500 || Wed, 24 Dec 2003 11:58:29 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+
+This is an automatic mailing from .
+There was an error on your site. Here is the report:
+-------------------
+error: 500
+This script has performed an Internal Server Error.
+time: Wed, 24 Dec 2003 12:05:58 -0500
+page: /errors/errors.php?500
+ip: 192.168.1.101
+browser: Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)
+referer: N/A
+-------------------
+Powered by Simple Errors by kneuf!
+        ----
+http://www.kneuf.com
+-------------------
+500 || Wed, 24 Dec 2003 12:10:42 -0500 || /errors/errors.php?500 || 192.168.1.101 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:24:38 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:24:42 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:25:29 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:25:38 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:26:00 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:26:06 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:26:29 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:26:53 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:27:12 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:27:47 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:27:53 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:28:13 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:29:04 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:29:58 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:35:48 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A
+404 || Wed, 24 Dec 2003 19:51:13 -0500 || /h || 192.168.1.1 || Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90) || N/A

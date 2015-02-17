@@ -1,0 +1,51 @@
+<!--
+jsOpenSliderbar 1.0
+(c) by Mathias Krebs, mathias.krebs(at)gmail.com, 2008
+license: LGPL
+-->
+
+<html>
+<head>
+<script language="JavaScript" src="browser.js" type="text/javascript"></script>
+<script language="JavaScript" src="phpOpenSlidebar.js" type="text/javascript"></script>
+<link rel='stylesheet' type='text/css' href='style.css'>
+<script>
+<!--
+function libinit()
+{
+   // Define the labels of the sliders.
+   labels      = ['Windows XP','Windows Vista','Mac OSX','Linux','Other'];
+   // Create the object.
+   // Parameters:
+   // aObjectName    -> The string representation of the object name of the current object.
+   // aCheckboxPanel -> Id of the div to put the checkboxes into.
+   // aSliderPanel   -> Id of the div to put the sliderbar into.
+   // aFormId        -> Name of the field to store the comma seperated result list into.
+   // aFormName      -> Name of the form the element is placed in.
+   // x              -> Left position of the slidebar.
+   // y              -> Top position of the slidebar.
+   // l              -> Length of the slidebar.
+   // xSize          -> x size of the slider.
+   // ySize          -> y size of the slider.
+   aSlideBar   = new slideBar('aSlideBar','checkboxPanel','sliderPanel','hiddenField','sliderForm',labels,0,0,500,9,15);
+   aSlideBar.initCheckboxes();
+   aSlideBar.redrawAll();
+}
+-->
+</script>
+</head>
+
+<body onload="libinit();" style='background-color:#aaaaaa;'>
+
+<form action='' method='post' name='sliderForm'>
+Please tell us if and how much you use the following operating systems.
+<br>
+<div style="position:relative;" id='checkboxPanel'></div>
+<div style="position: relative;height: 22px;" id='sliderPanel'></div>
+<br>
+<i>(Notice that the following input field may be replaced by an hidden field.)</i><br>
+<input name="hiddenField" value="0.5;0;0.25;0.25;0.0;" type="text" size='70'>
+</form>
+
+</body>
+</html>
