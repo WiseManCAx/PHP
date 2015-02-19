@@ -1,0 +1,11 @@
+table, td, th {
+    border: solid 1px #000;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 10px;
+}

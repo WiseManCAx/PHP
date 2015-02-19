@@ -1,0 +1,13 @@
+body{
+    background-color: #f5f5f5;
+}
+.wrapper{
+    width:500px;
+    margin:100px auto;
+    height:auto;
+    background-color:white;
+    padding:2%;
+    border-radius:5px;
+    border: 1px solid rgb(214, 214, 214);
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
